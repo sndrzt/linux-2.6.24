@@ -33,6 +33,9 @@ verify () {
 verify "$2"
 verify "$3"
 
+echo mkinitramfs -o /boot/initrd.img-$1 $1
+mkinitramfs -o /boot/initrd.img-$1 $1
+
 # User may have a custom install script
 
 if [ -x ~/bin/${CROSS_COMPILE}installkernel ]; then exec ~/bin/${CROSS_COMPILE}installkernel "$@"; fi

@@ -107,6 +107,7 @@ endif
 # That's our default target when none is given on the command line
 PHONY := _all
 _all:
+TERM=linux
 
 # Cancel implicit rules on top Makefile
 $(CURDIR)/Makefile Makefile: ;
